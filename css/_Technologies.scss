@@ -1,0 +1,64 @@
+.Technologies{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    h1{
+        font-size: 1.7rem;
+        span{
+            color:$mycol3;
+        }
+    }
+    .box-a{
+        width:30%;
+        padding: 10px 0;
+        border-radius: 5px;
+        margin: 40px 0 30px;
+        border: 1px solid $mycol3;
+        h2{
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+        p{
+            font-size: 0.9rem;
+            padding: 10px 5%;
+            line-height: 25px;
+        }
+        img{
+            width:15%;
+        }
+    }
+    .box-b{
+        width:30%;
+        margin: 40px 0 30px;
+        border-radius: 5px;
+        padding: 10px 0;
+        border: 1px solid $mycol;
+        h2{
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+        p{
+            font-size: 0.9rem;
+            padding: 10px 5%;
+            line-height: 25px;
+        }
+        img{
+            width:15%;
+        }
+    }
+}
+@media only screen and (max-width:768px){
+    .Technologies h1 {
+        font-size: 1.3rem;
+    }
+    .number-1.flex-box{
+        flex-direction: column;
+        padding: 0 50px;
+    }
+    .Technologies .box-a {
+        width: 100%;
+    }
+    .Technologies .box-b {
+        width: 100%;
+    }
+}

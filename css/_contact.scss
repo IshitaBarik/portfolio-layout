@@ -1,0 +1,85 @@
+.contact{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+    .inner{
+        overflow: hidden;
+        position: relative;
+        .header{
+           width:100%;
+        }
+        .designbox{
+           width: 30%;
+           padding: 20px;
+           margin: 30px auto;
+           display: flex;
+           flex-wrap: wrap;
+           text-decoration: none;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+           color:#000;
+           .iconbox{
+                @include flex_properties();
+                flex-direction: column;
+                align-items: center;
+                h6{
+                    font-size: 0.92rem;
+                    font-weight: 100;
+                }
+            }
+
+        }
+        .pink span{
+            background-color: $mycol3;
+            color:#fff;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .purple span{
+            background-color: $mycol2;
+            color:#fff;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .blue span{
+            background-color: $mycol;
+            color:#fff;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media only screen and (max-width:425px){
+    .inner.flex-box {
+        flex-direction: column;
+    }
+    .contact .inner .designbox{
+        width: 100%;
+        padding: 0px;
+    }
+    .contact .inner .designbox .iconbox h6 {
+        font-size: 0.8rem;
+    }
+}

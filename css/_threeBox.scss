@@ -1,0 +1,89 @@
+.three-box{
+    text-align: center;
+    background-color: $mycol4;
+    overflow: hidden;
+    .flex-box{
+        @include flex_properties();
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .para{
+        font-size: 1rem;
+        margin:70px 0;
+        margin-bottom: 20px;
+        padding: 30px;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .box{
+        width:30%;
+        text-align: left;
+        margin:70px 0;
+        .material-symbols-outlined {
+            font-size: 2.5rem;
+            color:$mycol4;
+        }
+        .icon-area-1{
+            background-color:$mycol3;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom:30px;
+        }
+        .icon-area-2{
+            background-color:$mycol2;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom:30px;
+        }
+        .icon-area-3{
+            background-color:$mycol;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom:30px;
+        }
+        h3{
+            font-size: 1.2rem;
+            font-weight: 100;
+            color:$mycol2;
+        }
+        p{
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+            margin: 30px 0;
+            padding-right: 0px;
+        }
+        h4{
+            color: $mycol3;
+        }
+    }
+}
+@media only screen and (max-width:768px){
+    .three-box .flex-box {
+        flex-direction: column;
+    }
+    .three-box .box {
+        width: 100%;
+        margin: 50px 30px;
+    }
+    .three-box .box p {
+        padding-right: 80px;
+    }
+}
+@media only screen and (max-width:375px){
+    .three-box .box p {
+        margin-right: 19%;
+    }
+}

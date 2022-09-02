@@ -1,0 +1,52 @@
+$font:'Roboto', sans-serif;
+$mycol:#3000ce;
+$mycol2: #7f44c0;
+$mycol3:#ff063c;
+$mycol4: #fff;
+@mixin button{
+    width:200px;
+    height:50px;
+    font-family: $font;
+    border:2px solid $mycol4;
+    color:$mycol4;
+    background:none;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor:pointer;
+}
+@mixin flex_properties{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+@import "nav";
+@import "threeBox";
+@import "image";
+@import "bio";
+.flex-box{
+    @include flex_properties();
+}
+@import "banner";
+@import "Technologies";
+@import "mywork";
+@import "contact";
+@import "footer";
+.inner{
+    width:100%;
+    max-width: 1100px;
+    margin: auto;
+    padding:1%;
+}
+body{
+    background-color: $mycol4;
+    font-family: $font;
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+html{
+    font-size: 16px;
+}

@@ -1,0 +1,153 @@
+nav{
+    @include flex_properties;
+    align-items: center;
+    justify-content:center;
+    width:100%;
+    position: fixed;
+    z-index: 10000;
+    background-color: $mycol4;
+    top:0;
+    left:0;
+    right:0;
+    & .logo{
+        font-size: 1.8rem;
+        font-weight: 700;
+        color:$mycol3;
+    }
+    .list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    & a{
+        text-decoration: none;
+    }
+    & #hamburger , & #hamburger2{
+    display: none;
+    }
+    & ul{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin-right: 20px;
+        li{
+            margin-left: 20px;
+            a{
+                color:#000;
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+    }
+}
+@media only screen and (max-width:768px){
+    nav .list{
+        flex-direction: column;
+    }
+    #navbar{
+        padding: 20px;
+        height: 70px;
+    }
+    nav .logo {
+        font-size: 1.5rem;
+    } 
+    nav ul {
+        display: block;
+        margin-right: 0;
+    }
+    nav ul li{
+        padding: 20px 0;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    nav ul li a{
+            color:$mycol4;
+    }
+    nav #hamburger , nav #hamburger2{
+        display: block;
+        z-index: 10;
+    }
+    #navbar-collapse.opened-navigation{
+        right: 0;
+    }
+    #navbar-collapse{
+        position: fixed;
+        right:-800px;
+        top:0;
+        width:80vh;
+        height: 100vh;
+        overflow: auto;
+        padding: 70px 0;
+        background-color: #000;
+        color:#fff;
+        text-align: center;
+        transition-duration: 1s;
+    }
+    nav #hamburger2{
+        position: absolute;
+        top:30px;
+        right:60px;
+    }
+}
+@media only screen and (max-width:425px){
+    #navbar {
+        padding: 10px;
+        height: 60px;
+    }
+    nav #hamburger{
+        font-size: 1.2rem;
+    }    
+    nav #hamburger2 {
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        right: 0;
+    }
+    .close{
+        margin-bottom: 70px;
+    }
+    nav .logo {
+        font-size: 1.3rem;
+    }
+    #navbar-collapse{
+        width:100%;
+    }
+    nav ul li a{
+    font-size: 0.9rem;
+    }
+    nav ul li {
+        padding: 10px 0;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    nav .list{
+        margin-top: 30px;
+    }
+    nav.inner.flex-box {
+        flex-direction: row;
+    }
+}
+@media only screen and (max-width:375px){
+    #navbar {
+        height: 50px;
+    }
+    nav .logo {
+        font-size: 1.4rem;
+    }
+    nav .list{
+        margin-top: 20px;
+    }
+    nav ul li a {
+        font-size: 0.7rem;
+    }
+    nav #hamburger{
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width:320px){
+    nav .logo {
+        font-size: 1.3rem;
+    }
+    nav #hamburger{
+        font-size: 0.8rem;
+    }
+}

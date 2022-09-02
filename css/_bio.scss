@@ -1,0 +1,260 @@
+.bio{
+    position: relative;
+    width:100%;
+    overflow: hidden;
+    color:$mycol4;
+    .inner{
+        position: relative;
+        height:1000px;
+        padding-top: 50px;
+        z-index: 2;
+        .left-side-text > a {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            background-color: transparent;
+            border: 1px solid $mycol4;
+            color:$mycol4;
+            padding: 10px;
+            width: 100%;
+            max-width: 180px;
+            transition: .3s;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        .left-side-text > a:hover{
+            background-color: $mycol4;
+            color: #000;
+        }
+        .left-side-text{
+            width: 40%;
+            h2{
+                font-size: 2.2rem;
+            }
+            p{
+                font-size: 1rem;
+                padding-right: 20px;
+                margin:40px 0;
+                font-weight: 700;
+                line-height: 30px;
+            }
+            .timeLine{
+                margin:20px 0;
+                height:250px;
+                overflow: auto;
+                &::-webkit-scrollbar{
+                    width:10px;
+                }
+                .top-size{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: start;
+                    align-items: center;
+                    .paraside{
+                        padding-left: 15px;
+                        font-size: 0.8rem;
+                    }
+                    .iconside{
+                        width:50px;
+                        height: 50px;
+                        background-image: linear-gradient($mycol3, $mycol2);
+                        border-radius: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .material-symbols-outlined {
+                        font-weight: bold;
+                        color:$mycol4;
+                        font-size: 1.5rem;
+                    }
+                }
+                .info-side{
+                    padding-left: 50px;
+                    margin-left: 25px;
+                    border-left: 1px solid $mycol4;
+                    h3{
+                        font-size: 0.9rem;
+                        margin-bottom: 0px;
+                    }
+                    p{
+                        font-size: 0.7rem;
+                        line-height: 20px;
+                        margin:2px 0;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+        .right-side-box{
+            width:500px;
+            height: 500px;
+            position: absolute;
+            background-image: linear-gradient($mycol3, $mycol2);
+            top:20%;
+            left:60%;
+        }
+        .img1{
+            width:240px;
+            height: 420px;
+            position: absolute;
+            top:8%;
+            right: 5%;
+            box-shadow: #000 3px 3px 50px;
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .img2{
+            width:270px;
+            height: 370px;
+            position: absolute;
+            top:36%;
+            right: 22%;
+            z-index: 2;
+            box-shadow: #000 3px 3px 50px;
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .img3{
+            width:240px;
+            height:370px;
+            position: absolute;
+            top:60%;
+            left: 74%;
+            z-index: 2;
+            box-shadow: #000 3px 3px 20px;
+
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .backgroundBox{
+        width:1150px;
+        min-width: 60%;
+        height: 900px;
+        position: absolute;
+        background-image: linear-gradient(45deg,$mycol,$mycol2);
+        left: 0;
+        top:0;
+    }
+}
+@media only screen and (max-width:990px){
+    .bio .inner .img1 {
+        width: 220px;
+        height: 390px;
+    }
+    .bio .inner .img2 {
+        width: 220px;
+        height: 310px;
+    }
+    .bio .inner .img3 {
+        width: 220px;
+        height: 330px;
+        top:50%;
+    }
+}
+@media only screen and (max-width:872px){
+    .bio .inner .img2 {
+        right: 27%;
+    }
+    .bio .inner .img3 {
+        top: 53%;
+        left: 70%;
+    }
+}
+@media only screen and (max-width:768px){
+    .bio .inner {
+        height: 1500px;
+    }
+    .bio .inner .left-side-text {
+        width: 100%;
+    }
+    .bio .inner .left-side-text h2 {
+        font-size: 1.7rem;
+    }
+    .bio .inner .left-side-text p {
+        font-size: 0.9rem;
+        padding-right:0px;
+        margin: 20px 0;
+    }
+    .bio .inner .right-side-box {
+        width: 1000px;
+        height: 1000px;
+        left: 10%;
+        top:45%;
+    }
+    .bio .inner .img2 {
+        width: 220px;
+        height: 310px;
+        right: 53%;
+        top: 55%;
+    }
+    .bio .inner .img1 {
+        width: 220px;
+        height: 390px;
+        top: 40%;
+        right: 15%;
+    }
+    .bio .inner .img3 {
+        width: 220px;
+        height: 310px;
+        top: 70%;
+        left: 54%;
+    }
+}
+@media only screen and (max-width: 630px){
+    .bio .inner .right-side-box {
+        height: 600px;
+    }
+    .bio .inner .img2 {
+        width: 180px;
+        height: 250px;
+    }
+    .bio .inner .img1 {
+        width: 180px;
+        height: 250px;
+    }
+    .bio .inner .img3 {
+        width: 180px;
+        height: 250px;
+        top: 64%;
+        left: 57%;
+    }
+}
+@media only screen and (max-width: 490px){
+    .bio .inner .img1 {
+        width: 140px;
+        height: 200px;
+    }
+    .bio .inner .img2 {
+        width: 140px;
+        height: 200px;
+    }
+    .bio .inner .img3 {
+        width: 140px;
+        height: 200px;
+        top: 60%;
+    }
+    .bio .inner .right-side-box {
+        height: 500px;
+    }
+}
+@media only screen and (max-width: 377px){
+    .bio .inner .img2 {
+        right: 20%;
+        top: 52%;
+    }
+    .bio .inner .img1 {
+        right: 3%;
+    }
+    .bio .inner .img3 {
+        top: 62%;
+        left: 14%;
+    }
+}

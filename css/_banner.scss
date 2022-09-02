@@ -1,0 +1,195 @@
+.wrapper{
+    width:100%;
+    height:800px;
+    margin-top:75px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    .inner{
+        position: relative;
+        .threeBoxOne{
+            width:450px;
+            height:500px;
+            position: absolute;
+            left:0;
+            top:60px;
+            background-image: linear-gradient(($mycol), ($mycol2));
+        }
+        .threeBoxTwo{
+            width:770px;
+            height:650px;
+            position: absolute;
+            left:33%;
+            top:0;
+            background-image: linear-gradient(($mycol3), ($mycol2));
+        }
+        .threeBoxThree{
+            width:100vw;
+            height:680px;
+            position: absolute;
+            left:60%;
+            top:130px;
+            background-image: linear-gradient(($mycol), ($mycol2));
+            z-index: -1;
+        }
+        .textarea{
+            position: absolute;
+            top:70px;
+            left:50%;
+            z-index: 12;
+            padding: 20px;
+            color:#fff;
+            h1{
+                font-size: 8rem;
+                line-height: 1.1;
+            }
+            p{
+                font-size: 1.5rem;
+                padding: 0 20px;
+                line-height: 40px;
+            }
+            button{
+                @include button();
+                margin-top: 40px;
+            }
+            button:hover{
+                background-color: #fff;
+                color:#000;
+                font-weight: 200;
+                transition: 1s;
+                transition-delay:.3s;
+            }
+        }
+        .image-area{
+            width:480px;
+            position:absolute;
+            top: 110px;
+            left: 30px;
+            img{
+                width: 100%;
+            }
+            .small-box{
+                width:60px;
+                height: 50px;
+                position: absolute;
+                right:20px;
+                bottom: 20px;
+                background-image: linear-gradient((-45deg, $mycol), ($mycol2));
+            }
+        }
+    }
+}
+@media only screen and (max-width:1080px){
+    .wrapper .inner .image-area {
+        width: 400px;
+    }
+    .wrapper .inner .textarea h1 {
+        font-size: 6rem;
+    }
+    
+}
+@media only screen and (max-width:878px){
+    .wrapper{
+        margin-bottom: 0;
+        height: 700px;
+    }
+    .wrapper .inner .threeBoxOne {
+        height: 300px;
+    }
+    .wrapper .inner .threeBoxTwo {
+        height: 450px;
+        left: 15%;
+    }
+    .wrapper .inner .threeBoxThree {
+        height: 480px;
+    }
+    .wrapper .inner .textarea h1 {
+        font-size: 5rem;
+    }
+    .wrapper .inner .textarea p {
+        font-size: 1rem;
+        line-height: 25px;
+        padding: 0;
+    }
+    .wrapper .inner .textarea button {
+        width: 170px;
+        height: 40px;
+        font-size: 0.73rem;
+    }
+    .wrapper .inner .textarea {
+        left: 40%;
+        top:0;
+        padding: 80px;
+    }
+    .wrapper .inner .image-area {
+        width: 350px;
+        top:200px;
+    }
+}
+@media only screen and (max-width:768px){
+    .wrapper{
+        height:800px;
+    }
+    .wrapper .inner .threeBoxTwo {
+        width: 550px;
+        height:650px;
+        left:15%;
+        top: 240px;
+    }
+    .wrapper .inner .threeBoxThree {
+        left: 30%;
+        top: 150px;
+    }
+    .wrapper .inner .textarea h1 {
+        font-size: 4.5rem;
+    }
+    .wrapper .inner .textarea p {
+        font-size: 0.9rem;
+    }
+    .wrapper .inner .textarea {
+        left: 2%;
+        top: 390px;
+        padding: 60px 130px;
+    }
+    .wrapper .inner .image-area {
+        top: 120px;
+    }
+}
+@media only screen and (max-width:460px){
+    .wrapper{
+        height: 800px;
+    }
+    .wrapper .inner .threeBoxOne {
+        width: 240px;
+        top:0px;
+    }
+    .wrapper .inner .threeBoxTwo {
+        top:350px;
+    }
+    .wrapper .inner .threeBoxThree {
+        top: 190px;
+    }
+    .wrapper .inner .image-area {
+        width: 300px;
+        left:20px;
+    }
+    .wrapper .inner .textarea {
+    top: 380px;
+    left: 0;
+}
+    .wrapper .inner .textarea h1 {
+        font-size: 4rem;
+    }
+    .wrapper .inner .image-area .small-box {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media only screen and (max-width:375px){
+    .wrapper{
+        height: 850px;
+    }
+    .wrapper .inner .threeBoxTwo {
+        height: 650px;
+    }
+    
+}

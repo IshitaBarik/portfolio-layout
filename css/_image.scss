@@ -1,0 +1,136 @@
+.Management-area-wrapper{
+    overflow: hidden;
+    width: 100%;
+    height:800px;
+}
+.Management-area {
+    position:relative;
+    background-image: linear-gradient($mycol4) 50%,($mycol4) 50%;
+    .image{
+        width:50%;
+        position: absolute;
+        top:0;
+        left:0;
+        img{
+            width:100%;
+        }
+        .smallBox2{
+            width:50px;
+            height:50px;
+            position: absolute;
+            bottom: 20px;
+            left:30px;
+            background-image: linear-gradient(($mycol3), ($mycol2));
+        }
+    }
+    .oneBox{
+        width:600px;
+        height:500px;
+        position: absolute;
+        top: 200px;
+        left:20%;
+        z-index: -1;
+        background-image: linear-gradient(($mycol3), ($mycol2));
+    }
+    .whiteBox{
+        width:550px;
+        height:350px;
+        position: absolute;
+        left:40%;
+        top:300px;
+        background-color:$mycol4;
+        padding-left: 60px;
+        padding-top: 60px;
+        h1{
+            font-size: 2.2rem;
+        }
+        p{
+            font-size: 1.15rem;
+            font-weight: 100;
+            color: #111111;
+            line-height: 30px;
+            margin:20px 0;
+        }
+        h4{
+            color:$mycol3;
+            font-weight: 100;
+        }
+    }
+    .computerImage{
+        position: absolute;
+        width:300px;
+        top: 0;
+        left:75%;
+        z-index: 2;
+        img{
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width:1024px){
+    .Management-area .oneBox {
+        top: 220px;
+    }
+    .Management-area .computerImage {
+        width: 210px;
+    }
+    .Management-area .computerImage {
+        width: 200px;
+        left: 70%;
+    }
+    .Management-area .whiteBox p {
+        font-size: 1rem;
+        margin-right: 140px;
+    }
+    .Management-area .whiteBox h1 {
+        font-size: 1.7rem;
+    }
+    .Management-area .whiteBox h4 {
+        font-size: 0.93rem;
+    }
+}
+@media only screen and (max-width:768px){
+    .Management-area .image {
+        width: 80%;
+        left: 10%;
+    }
+    .Management-area .computerImage {
+        display: none;
+    }
+    .Management-area .whiteBox {
+        left: 0;
+    }
+    .Management-area .image .smallBox2 {
+        top: 250px;
+    }
+    .Management-area .whiteBox h1 {
+        font-size: 1.5rem;
+    }
+    .Management-area .whiteBox p {
+        font-size: 0.9rem;
+        margin-right: 140px;
+    }
+    .Management-area .whiteBox {
+        height: 300px;
+    }
+}
+@media only screen and (max-width: 375px){
+    .Management-area .whiteBox h1 {
+        font-size: 1.3rem;
+    }
+    .Management-area .whiteBox p {
+        font-size: 0.82rem;
+        margin-right: 180px;
+    }
+    .Management-area .whiteBox h4 {
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 320px){
+    .Management-area .image .smallBox2 {
+        top: 200px;
+    }
+    .Management-area .whiteBox {
+        top: 250px;
+    }
+}
